@@ -108,6 +108,38 @@ After running the code generation process with Apollo, a new folder named GraphQ
 - Import the Generated Package in Your Code
 Now that the package is added to your project, you can import it into any file that needs access to the generated GraphQL code.
 
+**Step 9 :**  Start Using the Generated Code
+
+ ```
+import Foundation
+import Apollo
+import GraphQLSampleAPI
+
+class ApolloNetworkHelper {
+    static let shared = ApolloNetworkHelper()
+    private(set) lazy var apollo: ApolloClient = {
+        let url = URL(string: "https://countries.trevorblades.com/")!
+        return ApolloClient(url: url)
+    }()
+}
+ ```
+
+ ```
+ func fetchCountries() {        
+        ApolloNetworkHelper.shared.apollo.fetch(query: GetAllCountriesQuery()) { [weak self] response in            
+            switch response {
+            case .success(let results):
+                if let countries = results.data?.countries {
+                   print(countries)
+                } else if let errors = results.errors {
+                    print(errors)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+ ```
 
 
 

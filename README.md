@@ -8,7 +8,7 @@ I am using the GraphQL API provided by https://countries.trevorblades.com/ to fe
 **Step 1 :** Open Xcode and create a new project by selecting File > New > Project.
 
 **Step 2 :** Open your Xcode Project.
-- Go to File > Add Packages Dependencie.
+- Go to File > Add Packages Dependencies.
 - In the search bar, enter the following URL for Apollo GraphQL:
   
 [https://github.com/apollographql/apollo-ios](https://github.com/apollographql/apollo-ios)

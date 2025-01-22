@@ -83,7 +83,7 @@ Now that we’ve updated the configuration file, we can proceed to download the 
 This command will initiate the schema download process using the configured settings. After running the command, you should see a graphql folder in your project directory. Inside this folder, you'll find a schema.graphqls file, which contains the downloaded schema from your server.
 
 
-**Running Code Generation**
+**Running Code Generation : ** 
 Now that we have both the schema and query files in place, we can initiate the code generation process.
 
 - Open the Terminal and navigate to your project directory.
@@ -91,4 +91,23 @@ Now that we have both the schema and query files in place, we can initiate the c
 `./apollo-ios-cli generate`
 
 This command will trigger the code generation process using the downloaded schema and query files. Once the process is complete, you will see a new folder named GraphQLSampleAPI in your project directory. This folder contains the Swift package with the generated source code.
+
+**Step 8 :**  To add the generated Swift Package Manager (SPM) package(GraphQLSampleAPI) to your project for GraphQL integration, follow these steps:
+
+- Locate the Generated SPM Package
+After running the code generation process with Apollo, a new folder named GraphQLSampleAPI (or whatever you named your generated folder) will be created in your project directory. This folder contains the generated Swift package.
+
+- Open your Xcode project (or workspace) where you want to add the generated package.
+  
+- Add the Generated Package as a Local SPM Dependency
+In Xcode, go to File in the top menu and select Add Packages....
+In the Add Package Dependency window, instead of entering a GitHub URL or a package repository URL, select Add Local.
+A file picker will appear. Navigate to the folder where the generated ChargeTripAPI folder is located. Select the Package.swift file inside the ChargeTripAPI folder.
+Click Add Package. Xcode will now treat the generated code as an SPM dependency.
+
+- Import the Generated Package in Your Code
+Now that the package is added to your project, you can import it into any file that needs access to the generated GraphQL code.
+
+
+
 

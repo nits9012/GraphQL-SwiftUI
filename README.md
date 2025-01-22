@@ -17,8 +17,8 @@ This will fetch the latest version of Apollo from GitHub. Click Add Package to i
 
 **Step 3 :** Create GraphQL Queries
 - Create .graphql files in your project for the queries you want to use and name the file <file_name>.graphql and add your GraphQL query inside it. For example:
-
-`.query GetAllCountries {
+```
+ query GetAllCountries {
       countries {
             name,
             code,
@@ -41,8 +41,9 @@ This will fetch the latest version of Apollo from GitHub. Click Add Package to i
             },
             phone,
             emoji
-      }
-}`
+      } 
+}
+````
 
 
 **Step 4 :** Initialize the code generation configuration

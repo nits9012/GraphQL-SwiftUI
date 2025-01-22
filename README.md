@@ -53,9 +53,7 @@ From your project’s root directory, execute the following command with your cu
 
 `./apollo-ios-cli init --schema-namespace GraphQLSampleAPI --module-type swiftPackageManager`
 
-**Step 6 :** Download your server’s schema
-From your project’s root directory, execute the following command with your customized values:
-
+**Step 6 :** 
 - Next, we need to download the schema for our project. To do this, we’ll update the apollo-codegen-config.json file to include a schemaDownloadConfiguration. Follow the steps below:
 
 - Open the apollo-codegen-config.json file in a text editor. Locate the output object within the file. After the output object, add the following JSON code:

@@ -44,9 +44,37 @@ This will fetch the latest version of Apollo from GitHub. Click Add Package to i
       } 
 }
 ````
+**Step 4 :** Setup Codegen CLI
+- In your Xcode project, locate the project file in the file explorer. Right-click on the project file to reveal a context menu.
+- From the context menu, select the Install CLI plugin command. This will initiate the installation process for the Codegen CLI.
 
-
-**Step 4 :** Initialize the code generation configuration
+**Step 5 :** Initialize the code generation configuration
 From your project’s root directory, execute the following command with your customized values:
 
 `./apollo-ios-cli init --schema-namespace GraphQLSampleAPI --module-type swiftPackageManager`
+
+**Step 6 :** Download your server’s schema
+From your project’s root directory, execute the following command with your customized values:
+
+- Next, we need to download the schema for our project. To do this, we’ll update the apollo-codegen-config.json file to include a schemaDownloadConfiguration. Follow the steps below:
+
+- Open the apollo-codegen-config.json file in a text editor. Locate the output object within the file. After the output object, add the following JSON code:
+
+ ```
+    "schemaDownloadConfiguration": {
+        "downloadMethod": {
+            "introspection": {
+                "endpointURL": "https://countries.trevorblades.com/",
+                "httpMethod": {
+                    "POST": {}
+                },
+                "includeDeprecatedInputValues": false,
+                "outputFormat": "SDL"
+            }
+        },
+        "downloadTimeout": 60,
+        "headers": [],
+        "outputPath": "./graphql/schema.graphqls"
+    }
+ ```
+

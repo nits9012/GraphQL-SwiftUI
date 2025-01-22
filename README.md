@@ -15,6 +15,35 @@ I am using the GraphQL API provided by https://countries.trevorblades.com/ to fe
 
 This will fetch the latest version of Apollo from GitHub. Click Add Package to integrate Apollo into your project.
 
+**Step 3 :** Create GraphQL Queries
+- Create .graphql files in your project for the queries you want to use and name the file <file_name>.graphql and add your GraphQL query inside it. For example:
+
+`.query GetAllCountries {
+      countries {
+            name,
+            code,
+            capital,
+            currencies,
+            continent {
+              name
+            },
+            native,
+            states {
+                name
+              code
+            },
+            languages {
+              name
+            },
+            awsRegion,
+            subdivisions {
+              name
+            },
+            phone,
+            emoji
+      }
+}`
+
 
 **Step 4 :** Initialize the code generation configuration
 From your project’s root directory, execute the following command with your customized values:

@@ -14,3 +14,9 @@ I am using the GraphQL API provided by https://countries.trevorblades.com/ to fe
 [https://github.com/apollographql/apollo-ios](https://github.com/apollographql/apollo-ios)
 
 This will fetch the latest version of Apollo from GitHub. Click Add Package to integrate Apollo into your project.
+
+
+**Step 4 :** Initialize the code generation configuration
+From your project’s root directory, execute the following command with your customized values:
+
+`./apollo-ios-cli init --schema-namespace GraphQLSampleAPI --module-type swiftPackageManager`

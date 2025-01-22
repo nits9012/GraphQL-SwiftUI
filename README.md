@@ -76,3 +76,19 @@ From your project’s root directory, execute the following command with your cu
     }
  ```
 
+**Step 7 :** 
+Now that we’ve updated the configuration file, we can proceed to download the schema. In the Terminal, run the following command from your project directory
+`./apollo-ios-cli fetch-schema`
+
+This command will initiate the schema download process using the configured settings. After running the command, you should see a graphql folder in your project directory. Inside this folder, you'll find a schema.graphqls file, which contains the downloaded schema from your server.
+
+
+**Running Code Generation**
+Now that we have both the schema and query files in place, we can initiate the code generation process.
+
+- Open the Terminal and navigate to your project directory.
+- Run the following command in the Terminal:
+`./apollo-ios-cli generate`
+
+This command will trigger the code generation process using the downloaded schema and query files. Once the process is complete, you will see a new folder named GraphQLSampleAPI in your project directory. This folder contains the Swift package with the generated source code.
+

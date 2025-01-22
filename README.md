@@ -11,6 +11,6 @@ Step 2: Open your Xcode Project.
 - Go to File > Add Packages Dependencie.
 - In the search bar, enter the following URL for Apollo GraphQL:
   
-[Link Text](https://github.com/apollographql/apollo-ios)
+[https://github.com/apollographql/apollo-ios](https://github.com/apollographql/apollo-ios)
 
 This will fetch the latest version of Apollo from GitHub. Click Add Package to integrate Apollo into your project.

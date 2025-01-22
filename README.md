@@ -102,7 +102,7 @@ After running the code generation process with Apollo, a new folder named GraphQ
 ### Add the Generated Package as a Local SPM Dependency
 - In Xcode, go to File in the top menu and select Add Packages....
 - In the Add Package Dependency window, instead of entering a GitHub URL or a package repository URL, select Add Local.
-- A file picker will appear. Navigate to the folder where the generated ChargeTripAPI folder is located. Select the Package.swift file inside the ChargeTripAPI folder.
+- A file picker will appear. Navigate to the folder where the generated GraphQLSampleAPI folder is located. Select the Package.swift file inside the GraphQLSampleAPI folder.
 - Click Add Package. Xcode will now treat the generated code as an SPM dependency.
 
 - Import the Generated Package in Your Code
